@@ -89,7 +89,7 @@ if (!window.CleverTapWebView)
 </script> 
 </head>    
 <body onload="onLoadFunction()">    
-    <center> <h1> Paxel 2 </h1> </center>
+    <center> <h1> Paxel Delivery</h1> </center>
     <h3 id="currentID">Clevertap ID is : </h3>
     <p id="agent"></p>   
         <div class="container" id="login_form">   
@@ -108,13 +108,13 @@ if (!window.CleverTapWebView)
         document.getElementById("agent").innerText = Agent
         var currentID = document.getElementById("currentID");
         if(window.CleverTapWebView){
-            CleverTapWebView.pushEvent("WebView Main Activity Open App Paxel 2");
+            CleverTapWebView.pushEvent("Open Paxel Delivery Webview");
             currentID.textContent += "ID is from APP";
 
             document.getElementById("login_form").innerHTML = "";
         }
         else{
-            clevertap.event.push("WebView Main Activity Open Web Paxel 2");
+            clevertap.event.push("Open Paxel Delivey Web");
             currentID.textContent += clevertap.getCleverTapID();
             clevertap.notifications.push({
         "titleText":'Would you like to receive Push Notifications?',
@@ -128,10 +128,10 @@ if (!window.CleverTapWebView)
     }
     function SendEventFunction() {
         if(window.CleverTapWebView){
-            CleverTapWebView.pushEvent("Event From Webview Paxel 2");
+            CleverTapWebView.pushEvent("Event From Webview Paxel Delivery");
         }
         else{
-            clevertap.event.push("Event From Web Paxel 2");
+            clevertap.event.push("Event From Web Paxel Delivery");
         }
     }
 
